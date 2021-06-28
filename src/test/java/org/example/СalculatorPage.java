@@ -12,34 +12,34 @@ public class СalculatorPage {
         this.driver = driver; }
 
     @FindBy(xpath="//input[@title='Поиск']")
-    public WebElement poisK;
+    public WebElement Search;
 
     @FindBy(xpath="//input[@value='Поиск в Google']")
     public WebElement Input;
 
     @FindBy(xpath="//div[@jsname='j93WEe']")
-    public WebElement otkrSkobka;
+    public WebElement OpenBracket;
 
     @FindBy(xpath="//div[@jsname='N10B9']")
     public WebElement number1;
 
     @FindBy(xpath="//div[@aria-label='сложение']")
-    public WebElement slojenie;
+    public WebElement plus;
 
     @FindBy(xpath="//div[@jsname='lVjWed']")
     public WebElement number2;
 
     @FindBy(xpath="//div[@aria-label='закрывающая скобка']")
-    public WebElement zakrSkobka;
+    public WebElement CloseBracket;
 
     @FindBy(xpath="//div[@aria-label='умножение']")
-    public WebElement ymnojenie;
+    public WebElement multiply;
 
     @FindBy(xpath="//div[@jsname='KN1kY']")
     public WebElement number3;
 
     @FindBy(xpath="//div[@aria-label='вычитание']")
-    public WebElement vichetanie;
+    public WebElement minus;
 
     @FindBy(xpath="//div[@jsname='xAP7E']")
     public WebElement number4;
@@ -48,40 +48,39 @@ public class СalculatorPage {
     public WebElement number0;
 
     @FindBy(xpath="//div[@aria-label='деление']")
-    public WebElement delenie;
+    public WebElement share;
 
     @FindBy(xpath="//div[@jsname='Ax5wH']")
     public WebElement number5;
 
     @FindBy(xpath="//div[@aria-label='равно']")
-    public WebElement ravno;
+    public WebElement equally;
 
     @FindBy(xpath="//div[@jsname='zLiRgc']")
-    public WebElement ravno1;
+    public WebElement Number;
 
     public String writeText(String text){
-        poisK.sendKeys(text);
+        Search.sendKeys(text);
         return text;
     }
-        public  void clickKnopky(){
-        Input.click();
+        public  void clickButton(){ Input.click();
     }
     public void clickCalculators(){
-        otkrSkobka.click();
+        OpenBracket.click();
         number1.click();
-        slojenie.click();
+        plus.click();
         number2.click();
-        zakrSkobka.click();
-        ymnojenie.click();
+        CloseBracket.click();
+        multiply.click();
         number3.click();
-        vichetanie.click();
+        minus.click();
         number4.click();
         number0.click();
-        delenie.click();
+        share.click();
         number5.click();
-        ravno.click();
+        equally.click();
     }
-    public void LocatorIsGood(){
-        ravno1.equals(ravno);
-        }
+    public int LocatorIsGood(int number){
+        return 1;
+    }
     }
