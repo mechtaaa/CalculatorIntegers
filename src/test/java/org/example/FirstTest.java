@@ -2,7 +2,6 @@ package org.example;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class FirstTest extends Settings {
     @Test
@@ -11,26 +10,25 @@ public class FirstTest extends Settings {
         calculatorPage.writeText("Калькулятор");
         calculatorPage.clickButton();
         calculatorPage.clickCalculators();
-        calculatorPage.LocatorIsGood(1);
-        Assert.assertEquals(calculatorPage.LocatorIsGood(1), 1 );
-
+        String result = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+        Assert.assertEquals(result, calculatorPage.check());
     }
     @Test
     public void firstTest2(){
-        calculatorPage2 = new CalculatorPage2(driver);
-        calculatorPage2.writeText2("Калькулятор");
-        calculatorPage2.clickButton2();
-        calculatorPage2.clickCalculators2();
-        calculatorPage2.LocatorIsBad("Infinity");
-        Assert.assertEquals(calculatorPage2.LocatorIsBad("Infinity"), "Infinity");
+        calculatorPage = new СalculatorPage(driver);
+        calculatorPage.writeText2("Калькулятор");
+        calculatorPage.clickButton2();
+        calculatorPage.clickCalculators2();
+        String result2 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+        Assert.assertEquals(result2, calculatorPage.check2());
     }
     @Test
     public void firstTest3(){
-        calculatorPage3 = new CalculatorPage3(driver);
-        calculatorPage3.writeText3("Калькулятор");
-        calculatorPage3.clickButton3();
-        calculatorPage3.clickCalculators3();
-        calculatorPage3.LocatorIsBadError("Error");
-        Assert.assertEquals(calculatorPage3.LocatorIsBadError("Error"), "Error");
+        calculatorPage = new СalculatorPage(driver);
+        calculatorPage.writeText3("Калькулятор");
+        calculatorPage.clickButton3();
+        calculatorPage.clickCalculators3();
+        String result3 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+        Assert.assertEquals(result3, calculatorPage.check3());
     }
     }

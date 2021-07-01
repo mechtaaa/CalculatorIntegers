@@ -7,8 +7,6 @@ import java.util.concurrent.TimeUnit;
 public class Settings {
     public ChromeDriver driver;
     public СalculatorPage calculatorPage;
-    public CalculatorPage2 calculatorPage2;
-    public CalculatorPage3 calculatorPage3;
 
         @Before
         public void setUp(){
