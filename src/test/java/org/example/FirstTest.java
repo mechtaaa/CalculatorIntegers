@@ -10,8 +10,7 @@ public class FirstTest extends Settings {
         calculatorPage.writeText("Калькулятор");
         calculatorPage.clickButton();
         calculatorPage.clickCalculators();
-        String result = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
-        Assert.assertEquals(result, calculatorPage.check());
+        Assert.assertEquals(calculatorPage.getAnswer(), "1");
     }
     @Test
     public void firstTest2(){
@@ -19,8 +18,7 @@ public class FirstTest extends Settings {
         calculatorPage.writeText2("Калькулятор");
         calculatorPage.clickButton2();
         calculatorPage.clickCalculators2();
-        String result2 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
-        Assert.assertEquals(result2, calculatorPage.check2());
+        Assert.assertEquals(calculatorPage.getAnswer2(), "Infinity");
     }
     @Test
     public void firstTest3(){
@@ -28,7 +26,6 @@ public class FirstTest extends Settings {
         calculatorPage.writeText3("Калькулятор");
         calculatorPage.clickButton3();
         calculatorPage.clickCalculators3();
-        String result3 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
-        Assert.assertEquals(result3, calculatorPage.check3());
+        Assert.assertEquals(calculatorPage.getAnswer3(), "Error");
     }
     }

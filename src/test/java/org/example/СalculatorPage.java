@@ -1,4 +1,5 @@
 package org.example;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -90,10 +91,10 @@ public class СalculatorPage {
         search.sendKeys(text);
         return text;
     }
-        public  void clickButton(){
+        public  void clickButton() {
         input.click();
     }
-    public void clickCalculators(){
+    public void clickCalculators() {
         openBracket.click();
         number1.click();
         plus.click();
@@ -108,41 +109,41 @@ public class СalculatorPage {
         number5.click();
         equally.click();
     }
-    public String writeText2(String text){
+    public String writeText2(String text) {
         search2.sendKeys(text);
         return text;
     }
-    public void clickButton2(){
+    public void clickButton2() {
         input2.click();
     }
-    public void clickCalculators2(){
+    public void clickCalculators2() {
         numbernum6.click();
         share2.click();
         numbernum0.click();
         equally2.click();
     }
-    public String writeText3(String text){
+    public String writeText3(String text) {
         search3.sendKeys(text);
         return text;
     }
-    public void clickButton3(){
+    public void clickButton3() {
         input3.click();
     }
-    public void clickCalculators3(){
+    public void clickCalculators3() {
         sin.click();
         equally3.click();
     }
-    public String check(){
-        int i = 1;
-        String string = Integer.toString(i);
-        return string;
+    public String getAnswer() {
+       String result = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+       return result;
     }
-    public String check2(){
-        String string2 = "Infinity";
-        return string2;
+    public String getAnswer2() {
+        String result2 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+        return result2;
     }
-    public String check3(){
-        String string3 = "Error";
-        return string3;
+    public String getAnswer3(){
+        String result3 = driver.findElement(By.xpath("//span[@class='qv3Wpe']")).getText();
+        return result3;
     }
+
 }

@@ -9,7 +9,7 @@ public class Settings {
     public СalculatorPage calculatorPage;
 
         @Before
-        public void setUp(){
+        public void setUp() {
             System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\chromedriver.exe");
             driver = new ChromeDriver();
             // для всех тестов будет загружаться драйвер
@@ -18,7 +18,7 @@ public class Settings {
             driver.get("https://www.google.com/");
         }
         @After
-        public void close(){
+        public void close() {
             driver.quit();
         }
     }
